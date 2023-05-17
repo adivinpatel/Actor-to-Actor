@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Actor Connections</title>
+</head>
+<body>
+    <h1>Actor Connections</h1>
+    {% if connected and two%}
+        <p>{{ actor1 }} and {{ actor2 }} have not worked together directly in a movie between 2010 and 2023 but they do have mutual actors by which they are connected:</p>
+        <p>{{movies}}</p>
+        {% elif connected and not two%}
+        <p>{{ actor1 }} and {{ actor2 }} have worked together in the following Hindi movies between 2010 and 2023:</p>
+        <p>{{movies}}</p>
+    {% else %}
+        <p>{{ actor1 }} and {{ actor2 }} have not worked together in a movie.</p>
+    {% endif %}
+    <a href="/">Try Again</a>
+</body>
+</html>
+
+<style>
+    p {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 14px;
+    }
+</style>
